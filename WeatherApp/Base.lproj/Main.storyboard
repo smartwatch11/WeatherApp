@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7gY-UZ-nHb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="hI1-ud-VVN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-qb-7ys">
+                                <rect key="frame" x="8" y="215" width="398" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVH-Ev-nhE">
+                                <rect key="frame" x="123.5" y="281.5" width="167.5" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hI1-ud-VVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AWw-So-gGc"/>
+                            <constraint firstItem="UVH-Ev-nhE" firstAttribute="top" secondItem="Bsq-qb-7ys" secondAttribute="bottom" constant="8" id="CVN-JR-o3a"/>
+                            <constraint firstItem="UVH-Ev-nhE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EMQ-AF-7Yq"/>
+                            <constraint firstItem="Bsq-qb-7ys" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Irb-lV-cMU"/>
+                            <constraint firstItem="7gY-UZ-nHb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SR3-a5-eDW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bsq-qb-7ys" secondAttribute="trailing" constant="8" id="bPK-Vd-Mih"/>
+                            <constraint firstItem="hI1-ud-VVN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cDt-Jz-q6Z"/>
+                            <constraint firstItem="7gY-UZ-nHb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dXt-cv-FrF"/>
+                            <constraint firstItem="hI1-ud-VVN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="obO-wj-utt"/>
+                            <constraint firstItem="7gY-UZ-nHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pE9-Ay-tdO"/>
+                            <constraint firstItem="Bsq-qb-7ys" firstAttribute="top" secondItem="hI1-ud-VVN" secondAttribute="bottom" constant="120" id="w2P-Ob-iFR"/>
+                            <constraint firstAttribute="bottom" secondItem="7gY-UZ-nHb" secondAttribute="bottom" id="xej-O9-gj3"/>
+                            <constraint firstItem="Bsq-qb-7ys" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yCo-0b-1Pn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="Bsq-qb-7ys" id="S8a-DQ-4fB"/>
+                        <outlet property="searchBar" destination="hI1-ud-VVN" id="83E-1H-bm5"/>
+                        <outlet property="temperatureLabel" destination="UVH-Ev-nhE" id="UK7-Kz-Obm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="4000" height="6000"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
